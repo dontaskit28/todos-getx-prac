@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:my_app_getx/todos/models/todo_model.dart';
 
 class TodoCard extends StatelessWidget {
@@ -34,7 +35,21 @@ class TodoCard extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: onDelete,
+            onPressed: () {
+              Get.defaultDialog(
+                contentPadding: const EdgeInsets.all(20),
+                titlePadding: const EdgeInsets.only(top: 20),
+                title: 'Delete Todo',
+                middleText: 'Are you sure you want to delete this todo?',
+                textConfirm: 'Yes',
+                textCancel: 'No',
+                onCancel: () {},
+                onConfirm: () {
+                  onDelete();
+                  Get.back();
+                },
+              );
+            },
             icon: const Icon(Icons.delete),
           ),
         ],
