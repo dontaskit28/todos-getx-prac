@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:my_app_getx/home/screens/home_screen.dart';
+import 'package:my_app_getx/login/screens/login_screen.dart';
 import 'package:my_app_getx/todos/screens/todos_screen.dart';
 
 class AppRoutes {
@@ -9,7 +9,7 @@ class AppRoutes {
   static final List<GetPage> pages = [
     GetPage(
       name: AppRoutes.home,
-      page: () => const HomeScreen(),
+      page: () => const LoginScreen(),
     ),
     GetPage(
       name: AppRoutes.todos,

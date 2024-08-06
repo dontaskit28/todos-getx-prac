@@ -5,8 +5,8 @@ import 'package:my_app_getx/utils/app_routes.dart';
 import 'package:my_app_getx/utils/controllers/user_controller.dart';
 import 'package:my_app_getx/utils/snackbar.dart';
 
-class HomeScreen extends GetView<UserController> {
-  const HomeScreen({super.key});
+class LoginScreen extends GetView<UserController> {
+  const LoginScreen({super.key});
 
   onButtonPressed() {
     if (controller.userId == null) {
