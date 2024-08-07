@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_app_getx/utils/controllers/user_controller.dart';
 
 import '../controllers/todo_controller.dart';
 import '../widgets/todo_card.dart';
@@ -9,11 +10,12 @@ class TodosScreen extends GetView<TodoController> {
 
   @override
   Widget build(BuildContext context) {
+    int userId = Get.find<UserController>().userId!;
     return Obx(
       () {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('Todos'),
+            title: Text('Todos of User $userId'),
           ),
           body: controller.fetchingTodos
               ? const Center(

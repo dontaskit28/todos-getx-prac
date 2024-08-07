@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_app_getx/todos/models/todo_model.dart';
 import 'package:my_app_getx/utils/controllers/user_controller.dart';
@@ -20,7 +21,14 @@ class TodoController extends GetxController {
   @override
   void onInit() {
     super.onInit();
+    debugPrint('TodoController Created');
     fetchTodos(userId: userId);
+  }
+
+  @override
+  void onClose() {
+    super.onClose();
+    debugPrint('TodoController Closed');
   }
 
   void fetchTodos({
