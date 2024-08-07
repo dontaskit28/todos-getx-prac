@@ -12,7 +12,7 @@ class LoginScreen extends GetView<UserController> {
     if (controller.userId == null) {
       CustomSnackbar.showSnackbar(
         message: "User ID cannot be empty",
-        title: "Invalid User ID",
+        title: "Invalid User ID ",
       );
       return;
     }
